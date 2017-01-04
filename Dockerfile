@@ -11,8 +11,7 @@ RUN apt-get update
 RUN apt-get install -y git zlib1g-dev zip unzip php7.1-cli
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-RUN echo "192.30.252.153 codeception.com" > /etc/hosts
-RUN curl -LsS http://codeception.com/codecept.phar -o /usr/local/bin/codecept && chmod a+x /usr/local/bin/codecept
+RUN curl -H "Host: codeception.com" -LsS http://192.30.252.153/codecept.phar -o /usr/local/bin/codecept && chmod a+x /usr/local/bin/codecept
 
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
