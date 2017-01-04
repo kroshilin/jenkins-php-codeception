@@ -1,4 +1,4 @@
-FROM dvmedvedev/jenkins-php:2.32.1
+FROM jenkins:latest
 MAINTAINER Dmitry Medvedev <dvmedvedev@gmail.com>
 
 USER root
