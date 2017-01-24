@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y git zlib1g-dev zip unzip php7.1-cli php
 
 RUN curl -sL https://deb.nodesource.com/setup_7.x | bash -
 RUN apt-get install -y nodejs
-RUN npm install -g newman
+RUN npm install -g newman grunt-cli
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN curl -LsS http://codeception.com/codecept.phar -o /usr/local/bin/codecept && chmod a+x /usr/local/bin/codecept
