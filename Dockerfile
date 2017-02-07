@@ -16,6 +16,8 @@ RUN curl -LsS http://codeception.com/codecept.phar -o /usr/local/bin/codecept &&
 
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+RUN useradd -ms /bin/bash web1
+
 USER jenkins
 
 RUN composer global require hirak/prestissimo
