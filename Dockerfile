@@ -14,6 +14,8 @@ RUN npm install -g newman grunt-cli gulp gulp-cli
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN curl -LsS http://codeception.com/codecept.phar -o /usr/local/bin/codecept && chmod a+x /usr/local/bin/codecept
 
+RUN curl -LO http://www.phing.info/get/phing-latest.phar && mv phing-latest.phar /usr/local/bin/phing && chmod +x /usr/local/bin/phing
+
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN useradd -ms /bin/bash web1
