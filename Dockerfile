@@ -1,4 +1,4 @@
-FROM jenkins:latest
+FROM jenkins/jenkins:lts
 MAINTAINER Dmitry Medvedev <dvmedvedev@gmail.com>
 
 USER root
