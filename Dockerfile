@@ -12,8 +12,8 @@ RUN (cd /tmp && \
 	tar -xzvf php-7.1.12.tar.gz && \
 	cd php-7.1.12/ext/pcntl/ && \
 	phpize && ./configure && make install && \
-	echo "extension=pcntl.so" >> /etc/php/7.1/cli/conf.d/10-pcntl.ini && \
-	cd .. && rm -rf php-7.1.12 \
+	#echo "extension=pcntl.so" >> /etc/php/7.1/cli/conf.d/10-pcntl.ini && \
+	cd /tmp && rm -rf php-7.1.12 \
 )
 
 RUN curl -sL https://deb.nodesource.com/setup_7.x | bash -
