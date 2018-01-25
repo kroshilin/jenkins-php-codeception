@@ -38,4 +38,4 @@ USER jenkins
 RUN composer global require hirak/prestissimo
 
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
-ENTRYPOINT ["/bin/tini", "--", "/usr/local/bin/entrypoint.sh"]
+ENTRYPOINT ["/bin/bash", "--", "/usr/local/bin/entrypoint.sh"]
