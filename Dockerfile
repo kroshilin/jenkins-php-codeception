@@ -20,6 +20,8 @@ RUN curl -sL https://deb.nodesource.com/setup_7.x | bash -
 RUN apt-get install -y nodejs
 RUN npm install -g newman grunt-cli gulp gulp-cli uglify-js uglifycss webpack
 
+RUN apt-get install -y ruby-full && gem install sass
+
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN curl -LsS http://codeception.com/codecept.phar -o /usr/local/bin/codecept && chmod a+x /usr/local/bin/codecept
 
