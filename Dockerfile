@@ -1,5 +1,4 @@
 FROM jenkins/jenkins:lts
-MAINTAINER Dmitry Medvedev <dvmedvedev@gmail.com>
 
 USER root
 
@@ -16,7 +15,7 @@ RUN (cd /tmp && \
 	cd /tmp && rm -rf php-7.1.12 \
 )
 
-RUN curl -sL https://deb.nodesource.com/setup_7.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get install -y nodejs
 RUN npm install -g newman grunt-cli gulp gulp-cli uglify-js uglifycss webpack
 
