@@ -34,7 +34,9 @@ RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN useradd -ms /bin/bash web1
 
-RUN echo "jenkins ALL=(ALL) NOPASSWD: /usr/sbin/service, /usr/sbin/ntpd" >> /etc/sudoers
+RUN apt-get update && apt-get install -y strace
+
+RUN echo "jenkins ALL=(ALL) NOPASSWD: /usr/sbin/service, /usr/sbin/ntpd, /usr/bin/strace" >> /etc/sudoers
 
 USER jenkins
 
