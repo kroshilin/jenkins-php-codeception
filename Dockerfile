@@ -34,7 +34,7 @@ RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN useradd -ms /bin/bash web1
 
-RUN apt-get update && apt-get install -y strace
+RUN apt-get update && apt-get install -y strace jq
 
 RUN echo "jenkins ALL=(ALL) NOPASSWD: /usr/sbin/service, /usr/sbin/ntpd, /usr/bin/strace" >> /etc/sudoers
 
