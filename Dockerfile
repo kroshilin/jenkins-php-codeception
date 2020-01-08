@@ -19,7 +19,7 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get install -y nodejs
 RUN npm install -g npm@latest
 RUN npm install node-sass
-RUN npm install -g newman grunt-cli gulp gulp-cli uglify-js uglifycss webpack 
+RUN npm install -g newman grunt-cli gulp gulp-cli uglify-js uglifycss webpack "grunt-sass@^1.2.1"
 
 RUN apt-get install -y ruby-full && gem install sass
 
